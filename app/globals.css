@@ -90,10 +90,11 @@
   html {
     scroll-padding-top: 20px;
     scroll-behavior: smooth;
+    background-color: #0a0a0a;
   }
   body {
     @apply bg-background text-foreground;
-    background-color: #0a0a0a;
+    background-color: #0a0a0a !important;
   }
 }
 
