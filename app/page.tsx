@@ -9,7 +9,6 @@ import {
   TestimonialsVideo,
   WhyChooseUs,
   WorkWithMe,
-  WorkWithTicker,
 } from '@/components/sections'
 import { StructuredData } from '@/components/seo'
 
@@ -24,7 +23,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <WorkWithTicker />
         <WhyChooseUs />
         <Stats />
         <WorkWithMe />
