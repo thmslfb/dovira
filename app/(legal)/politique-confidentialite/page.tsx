@@ -165,7 +165,7 @@ export default function PolitiqueConfidentialitePage() {
                 </ul>
                 <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 mt-4">
                   <p className="text-green-400 text-sm">
-                    <strong>Aucune autre donnée personnelle</strong> n'est collectée directement par Dovira. Pas de formulaire de contact, pas de newsletter, pas de tracking.
+                    <strong>Aucune autre donnée personnelle</strong> n&apos;est collectée directement par Dovira. Pas de formulaire de contact, pas de newsletter, pas de tracking.
                   </p>
                 </div>
               </div>
@@ -219,7 +219,7 @@ export default function PolitiqueConfidentialitePage() {
                   </ul>
                   <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 mt-4">
                     <p className="text-blue-400 text-sm">
-                      <strong>Aucun marketing, aucun suivi, aucune revente</strong> de données. Utilisation strictement limitée à l'exécution de votre commande.
+                      <strong>Aucun marketing, aucun suivi, aucune revente</strong> de données. Utilisation strictement limitée à l&apos;exécution de votre commande.
                     </p>
                   </div>
                 </div>

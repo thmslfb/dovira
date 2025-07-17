@@ -395,7 +395,7 @@ export default function CGUPage() {
               </div>
               <div className="space-y-4">
                 <p className="text-[#BCBCBC] leading-relaxed">
-                  Le site n'utilise pas de cookies de suivi ou de personnalisation. Seuls des cookies techniques strictement nécessaires au fonctionnement du site peuvent être utilisés :
+                  Le site n&apos;utilise pas de cookies de suivi ou de personnalisation. Seuls des cookies techniques strictement nécessaires au fonctionnement du site peuvent être utilisés :
                 </p>
                 <ul className="space-y-2 text-[#BCBCBC] ml-4">
                   <li className="flex items-start gap-3">

@@ -3,6 +3,7 @@
 import { ScrollAnimated } from '@/components/animations'
 import { SectionTitle } from '@/components/ui/section-title'
 import { Play } from 'lucide-react'
+import Image from 'next/image'
 import { useState } from 'react'
 
 const videoTestimonials = [
@@ -110,10 +111,11 @@ export const TestimonialsVideo = () => {
                             </div>
                           </div>
                         </div>
-                        <img 
+                        <Image 
                           src={video.thumbnail || `https://vumbnail.com/${video.vimeoId}.jpg`}
                           alt="Thumbnail vidéo témoignage"
-                          className="absolute inset-0 w-full h-full object-cover rounded-xl"
+                          fill
+                          className="object-cover rounded-xl"
                         />
                       </>
                     )}
