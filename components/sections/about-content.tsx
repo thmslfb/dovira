@@ -83,7 +83,7 @@ export const AboutContent = () => {
                 </h3>
                 <div className="space-y-6 text-[#BCBCBC] text-lg leading-relaxed">
                   <p>
-                    Notre force, c&apos;est notre <strong className="text-white">capacité d&apos;adaptation à toutes les niches</strong> : business en ligne, formation, coaching, immobilier, e-commerce, personal branding…
+                    Notre force, c&apos;est notre <strong className="text-white">capacité d&apos;adaptation à toutes les niches</strong> : business en ligne, formation, coaching, immobilier, ecommerce, personal branding…
                   </p>
                   <p>
                     Quel que soit ton secteur, on s&apos;imprègne de ton univers pour en faire ressortir l&apos;essence à travers des contenus hautement engageants.

@@ -157,7 +157,7 @@ export const Header = () => {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center py-4 px-3"
                       >
-                        Demander un entretien
+                        Réserver un appel
                       </Link>
                     </Button>
                   </div>

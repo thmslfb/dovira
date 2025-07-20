@@ -4,7 +4,7 @@ import { SectionTitle } from '../ui'
 export const Stats = () => {
   const stats = [
     {
-      number: '+400',
+      number: '+500',
       label: 'Vidéos créées',
       description: 'Montages réalisés pour nos clients',
     },

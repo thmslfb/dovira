@@ -48,26 +48,31 @@ export const Testimonials = () => {
               <CardContent className="relative z-10 p-0">
                 <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
                   <p className="text-lg font-medium text-[#BCBCBC] group-hover:text-white transition-colors duration-300">
-                    Travailler avec Dovira a transformé notre communication
-                    vidéo. Il livre toujours des montages percutants dans des
-                    délais record.
+                    Travailler avec Dovira a transformé ma communication vidéo.
+                    Il livre toujours des montages percutants dans des délais
+                    record.
                   </p>
 
                   <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                     <Avatar className="size-12 ring-2 ring-[rgb(229,208,255)]/40 ring-offset-2 ring-offset-[#0f0f0f]">
                       <AvatarImage
-                        src="https://yt3.googleusercontent.com/hTNJ4FrWeYuwhhz96V068Z4Nm82brusKZ45P0zfGuHrrAoubXgX3HuSZLHSo9T-x3Yp2xApWJg=s160-c-k-c0x00ffffff-no-rj"
-                        alt="Harry JMG"
+                        src="https://yt3.googleusercontent.com/8ODhz1R1OR5zACZ0b8Dg2z2eaQHEaEXp6sAQtwjgFdDw89cVtNUeK8gcyrv-n4ErUWYN8ILs=s160-c-k-c0x00ffffff-no-rj"
+                        alt="Jordan Girbon"
                         height="400"
                         width="400"
                         loading="lazy"
                       />
-                      <AvatarFallback>{"Harry JMG".split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                      <AvatarFallback>
+                        {'Jordan Girbon'
+                          .split(' ')
+                          .map((n) => n[0])
+                          .join('')}
+                      </AvatarFallback>
                     </Avatar>
 
                     <div>
                       <p className="text-sm font-medium text-white">
-                        Harry JMG
+                        Jordan Girbon
                       </p>
                       <span className="text-[#BCBCBC] block text-sm">
                         YouTuber
@@ -90,25 +95,28 @@ export const Testimonials = () => {
                     </div>
                     <p className="text-base font-medium text-[#BCBCBC] group-hover:text-white transition-colors duration-300">
                       Un monteur réactif et créatif. Chaque vidéo est
-                      parfaitement adaptée à nos objectifs marketing.
+                      parfaitement adaptée à mes objectifs marketing.
                     </p>
                   </div>
 
                   <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                     <Avatar className="size-11 ring-2 ring-[rgb(229,208,255)]/35 ring-offset-2 ring-offset-[#0f0f0f]">
                       <AvatarImage
-                        src="https://yt3.googleusercontent.com/BoH48ZFsxLUxST5tZQ_dM4eiqn6p56ANAuSQuZVMOQYToqx497l1DyM9qPyUtrbl2yuddPbWWQ=s160-c-k-c0x00ffffff-no-rj"
-                        alt="Yann Darwin"
+                        src="https://yt3.googleusercontent.com/4rSXoW6AUEPvWHwyGLNJEO41mweWRdQ4KqFHwbBAYOwIBZJQZkimg558wcz3A2wt8g6xUq9B=s160-c-k-c0x00ffffff-no-rj"
+                        alt="Tomy"
                         height="400"
                         width="400"
                         loading="lazy"
                       />
-                      <AvatarFallback>{"Yann Darwin".split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                      <AvatarFallback>
+                        {'Tomy'
+                          .split(' ')
+                          .map((n) => n[0])
+                          .join('')}
+                      </AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="text-sm font-medium text-white">
-                        Yann Darwin
-                      </p>
+                      <p className="text-sm font-medium text-white">Tomy</p>
                       <span className="text-[#BCBCBC] block text-sm">
                         YouTuber
                       </span>
@@ -137,60 +145,25 @@ export const Testimonials = () => {
                   <div className="grid items-center gap-3 [grid-template-columns:auto_1fr]">
                     <Avatar className="size-10 ring-2 ring-[rgb(229,208,255)]/30 ring-offset-2 ring-offset-[#0f0f0f]">
                       <AvatarImage
-                        src="https://yt3.googleusercontent.com/S0quWyDjk8dNQ5KU3CvzFP4Bz3qrz35RMZ4m_TGc-S5redn5-6v662wlO_MRkLjIqmXxyXxFUng=s160-c-k-c0x00ffffff-no-rj"
-                        alt="Arthur Mosa"
+                        src="https://yt3.googleusercontent.com/5dVpG2rFX06vHpusi516ft4us1jei5TKOxupGy0GflPCIRRI-yrSlQYr8wN9RUFkBNgk9qwC=s160-c-k-c0x00ffffff-no-rj"
+                        alt="D'Angelo"
                         height="400"
                         width="400"
                         loading="lazy"
                       />
-                      <AvatarFallback>{"Arthur Mosa".split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                      <AvatarFallback>
+                        {"D'Angelo"
+                          .split(' ')
+                          .map((n) => n[0])
+                          .join('')}
+                      </AvatarFallback>
                     </Avatar>
                     <div>
                       <p className="text-sm font-medium text-white">
-                        Arthur Mosa
+                        D&apos;Angelo
                       </p>
                       <span className="text-[#BCBCBC] block text-sm">
                         YouTuber
-                      </span>
-                    </div>
-                  </div>
-                </blockquote>
-              </CardContent>
-            </Card>
-
-            <Card className="card variant-mixed relative bg-[#0f0f0f]/80 backdrop-blur-sm border-[rgb(229,208,255)]/20 hover:shadow-[rgb(229,208,255)]/12 transition-all duration-350 group overflow-hidden p-6">
-              <div className="absolute inset-0 bg-gradient-to-br from-[rgb(180,120,255)]/4 via-[#0f0f0f]/30 to-[rgb(160,100,255)]/6 pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[rgb(229,208,255)]/2 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-350" />
-
-              <CardContent className="h-full p-0 relative z-10">
-                <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                  <div className="space-y-3">
-                    <div className="p-1.5 rounded-full bg-[rgb(180,120,255)]/20 shadow-sm w-fit">
-                      <Quote className="size-3 fill-[rgb(180,120,255)] text-[rgb(180,120,255)]" />
-                    </div>
-                    <p className="text-sm text-[#BCBCBC] group-hover:text-white transition-colors duration-300">
-                      Un service pro, rapide et toujours à l&apos;écoute. Merci
-                      !
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-[auto_1fr] gap-3">
-                    <Avatar className="size-10 ring-2 ring-[rgb(229,208,255)]/30 ring-offset-2 ring-offset-[#0f0f0f]">
-                      <AvatarImage
-                        src="https://yt3.googleusercontent.com/tZWUtk7dwsEydZDtOXnk2cxEpZPldvouzlhzTGfDbopC1JsydkCub1WxnRuxrrDqK143cLR2hg=s160-c-k-c0x00ffffff-no-rj"
-                        alt="Carolin Arthaud"
-                        height="400"
-                        width="400"
-                        loading="lazy"
-                      />
-                      <AvatarFallback>{"Carolin Arthaud".split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <p className="text-sm font-medium text-white">
-                        Carolin Arthaud
-                      </p>
-                      <span className="text-[#BCBCBC] block text-sm">
-                        Immobilier
                       </span>
                     </div>
                   </div>

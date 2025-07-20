@@ -27,10 +27,10 @@ export default function Home() {
         <Stats />
         <WorkWithMe />
         <Testimonials />
-        <TestimonialsVideo />
         <Steps />
         <Pricing />
         <FAQ />
+        <TestimonialsVideo />
       </main>
     </>
   )

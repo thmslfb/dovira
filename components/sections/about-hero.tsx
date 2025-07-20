@@ -7,7 +7,7 @@ export const AboutHero = () => {
   return (
     <section className="relative pt-24 pb-16 md:pb-24 md:pt-36 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-t from-transparent to-[#0a0a0a] pointer-events-none z-20" />
-      
+
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute top-20 right-1/4 w-96 h-96 rounded-full bg-[rgb(180,120,255)]/5 blur-3xl animate-pulse"
@@ -31,19 +31,24 @@ export const AboutHero = () => {
             </ScrollAnimated>
 
             <ScrollAnimated delay={0.2}>
-              <h1 className="text-4xl md:text-5xl font-semibold text-left mb-6 tracking-tighter md:tracking-tight" style={{
-                background: 'linear-gradient(135deg, rgb(180,120,255) 0%, rgb(200,140,255) 40%, rgb(160,100,255) 70%, rgb(140,80,255) 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
-              }}>
+              <h1
+                className="text-4xl md:text-5xl font-semibold text-left mb-6 tracking-tighter md:tracking-tight"
+                style={{
+                  background:
+                    'linear-gradient(135deg, rgb(180,120,255) 0%, rgb(200,140,255) 40%, rgb(160,100,255) 70%, rgb(140,80,255) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
                 Khalid Capron
               </h1>
             </ScrollAnimated>
-            
+
             <ScrollAnimated delay={0.3}>
               <p className="text-xl text-[#BCBCBC] leading-relaxed mb-8">
-                Je transforme tes idées en contenus vidéo qui marquent les esprits et boostent tes résultats.
+                Je transforme tes idées en contenus vidéo qui marquent les
+                esprits et boostent tes résultats.
               </p>
             </ScrollAnimated>
 
@@ -52,19 +57,25 @@ export const AboutHero = () => {
                 <div className="flex items-start gap-4">
                   <div className="w-1 h-6 bg-[rgb(180,120,255)] rounded-full mt-1 flex-shrink-0" />
                   <p className="text-[#BCBCBC] leading-relaxed">
-                    <strong className="text-white">Expert</strong> en montage vidéo et motion design
+                    <strong className="text-white">Expert</strong> en montage
+                    vidéo et motion design
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-1 h-6 bg-[rgb(180,120,255)] rounded-full mt-1 flex-shrink-0" />
                   <p className="text-[#BCBCBC] leading-relaxed">
-                    <strong className="text-white">Partenaire stratégique</strong> pour créateurs et entrepreneurs ambitieux
+                    <strong className="text-white">
+                      Partenaire stratégique
+                    </strong>{' '}
+                    pour créateurs et entrepreneurs ambitieux
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-1 h-6 bg-[rgb(180,120,255)] rounded-full mt-1 flex-shrink-0" />
                   <p className="text-[#BCBCBC] leading-relaxed">
-                    <strong className="text-white">Spécialisé</strong> dans tous les secteurs : business, formation, e-commerce
+                    <strong className="text-white">Spécialisé</strong> dans tous
+                    les secteurs : business, formation,{' '}
+                    <span className="inline-block">e-commerce</span>
                   </p>
                 </div>
               </div>

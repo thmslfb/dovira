@@ -11,14 +11,6 @@ export const WorkWithTicker = () => {
 
   const channels = [
     {
-      id: 1,
-      name: 'Harry JMG',
-      image:
-        'https://yt3.googleusercontent.com/hTNJ4FrWeYuwhhz96V068Z4Nm82brusKZ45P0zfGuHrrAoubXgX3HuSZLHSo9T-x3Yp2xApWJg=s160-c-k-c0x00ffffff-no-rj',
-      at: '@HarryJMG',
-      followers: '85,8 k',
-    },
-    {
       id: 2,
       name: 'Yann Darwin',
       image:
@@ -26,7 +18,6 @@ export const WorkWithTicker = () => {
       at: '@YannDarwin',
       followers: '1,27M',
     },
-
     {
       id: 3,
       name: 'Arthur Mosa',
@@ -50,14 +41,6 @@ export const WorkWithTicker = () => {
         'https://yt3.googleusercontent.com/lYzc-8I2cYYje_TQO8f9vdw9NEsHdHS_cl8ewXoGlnj2TRkCRcjNSjAnItJF1j4sGtPxo3Onig=s160-c-k-c0x00ffffff-no-rj',
       at: '@nassimboukrouh',
       followers: '2,06 k',
-    },
-    {
-      id: 6,
-      name: 'Finou TV',
-      image:
-        'https://yt3.googleusercontent.com/PZu3iIw85W7kFAX3YGxZOv1ChL_Mxu1huP_Fe6XaTR-2v14fPiOPeUxChNmhDTX6TSsdqffwvg=s160-c-k-c0x00ffffff-no-rj',
-      at: '@finoutv',
-      followers: '47,4 k',
     },
     {
       id: 7,
