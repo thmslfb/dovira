@@ -25,8 +25,8 @@ export const PORTFOLIO_VIDEOS = [
   },
   {
     id: 5,
-    thumbnail: '/images/video-thumbnail-2.png',
-    vimeoId: '1102200706',
+    thumbnail: '/images/video-thumbnail-4.png',
+    vimeoId: '1107823882',
     alt: 'Video 5',
   },
 ] as const
