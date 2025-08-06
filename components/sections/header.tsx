@@ -1,12 +1,13 @@
 'use client'
 
 import { Button } from '@/components/ui'
+import { menuItems } from '@/lib/constants/navigation'
 import { cn } from '@/lib/utils'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { menuItems } from '@/lib/constants/navigation'
 
 export const Header = () => {
   const [menuState, setMenuState] = useState(false)
@@ -44,14 +45,13 @@ export const Header = () => {
               className="relative group"
               suppressHydrationWarning
             >
-              <span
-                className="relative text-2xl font-montserrat font-bold tracking-wide transition-all duration-300 group-hover:opacity-80 text-white"
-                style={{
-                  fontSize: 'clamp(1.5rem, 2vw, 2.25rem)',
-                }}
-              >
-                Dovira
-              </span>
+              <Image
+                src="/images/logo.png"
+                alt="logo"
+                width={70}
+                height={70}
+                className="w-16 h-16"
+              />
             </Link>
 
             <div className="absolute inset-0 m-auto hidden size-fit lg:block">
