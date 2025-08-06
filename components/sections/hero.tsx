@@ -11,8 +11,8 @@ import {
 } from '@/components/ui'
 import { ArrowDownRight, Play } from 'lucide-react'
 import { AnimatePresence, motion, useSpring } from 'motion/react'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Card, CardContent, CardFooter } from '../ui/card'
 import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel'
@@ -106,7 +106,13 @@ export const Hero = () => {
             }}
           >
             <motion.span
-              key={isPortfolioHover ? 'portfolio' : isPlayHover ? 'lancer' : 'glisser'}
+              key={
+                isPortfolioHover
+                  ? 'portfolio'
+                  : isPlayHover
+                  ? 'lancer'
+                  : 'glisser'
+              }
               initial={{ opacity: 0, y: 10, scale: 0.8 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.8 }}
@@ -118,7 +124,11 @@ export const Hero = () => {
                 stiffness: 300,
               }}
             >
-              {isPortfolioHover ? 'Portfolio' : isPlayHover ? 'Lancer' : 'Glisser'}
+              {isPortfolioHover
+                ? 'Portfolio'
+                : isPlayHover
+                ? 'Lancer'
+                : 'Glisser'}
             </motion.span>
           </motion.div>
         )}
