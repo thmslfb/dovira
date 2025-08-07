@@ -8,7 +8,7 @@ export const PORTFOLIO_VIDEOS = [
   {
     id: 2,
     thumbnail: '/images/video-thumbnail-1.png',
-    vimeoId: '1101156699',
+    vimeoId: '1108016789',
     alt: 'Video 1',
   },
   {
@@ -19,15 +19,15 @@ export const PORTFOLIO_VIDEOS = [
   },
   {
     id: 4,
-    thumbnail: '/images/video-thumbnail-1.png',
-    vimeoId: '1101156699',
-    alt: 'Video 4',
+    thumbnail: '/images/video-thumbnail-5.png',
+    vimeoId: '1108015936',
+    alt: 'Video 3',
   },
   {
     id: 5,
     thumbnail: '/images/video-thumbnail-4.png',
     vimeoId: '1107823882',
-    alt: 'Video 5',
+    alt: 'Video 4',
   },
 ] as const
 

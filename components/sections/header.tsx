@@ -45,13 +45,17 @@ export const Header = () => {
               className="relative group"
               suppressHydrationWarning
             >
-              <Image
-                src="/images/logo.png"
-                alt="logo"
-                width={70}
-                height={70}
-                className="w-16 h-16"
-              />
+              <div className="flex items-center gap-1">
+                <Image
+                  src="/images/logo-2.png"
+                  alt="logo"
+                  width={40}
+                  height={40}
+                />
+                <p className="text-white text-2xl font-bold font-montserrat">
+                  Dovira
+                </p>
+              </div>
             </Link>
 
             <div className="absolute inset-0 m-auto hidden size-fit lg:block">
