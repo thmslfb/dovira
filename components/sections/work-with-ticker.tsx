@@ -1,7 +1,7 @@
 'use client'
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { ScrollAnimated } from '@/components/animations'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { motion } from 'motion/react'
 import { useEffect, useRef, useState } from 'react'
 
@@ -11,39 +11,30 @@ export const WorkWithTicker = () => {
 
   const channels = [
     {
-      id: 2,
-      name: 'Yann Darwin',
+      id: 1,
+      name: "D'Angelo",
       image:
-        'https://yt3.googleusercontent.com/BoH48ZFsxLUxST5tZQ_dM4eiqn6p56ANAuSQuZVMOQYToqx497l1DyM9qPyUtrbl2yuddPbWWQ=s160-c-k-c0x00ffffff-no-rj',
-      at: '@YannDarwin',
-      followers: '1,27M',
+        'https://yt3.googleusercontent.com/5dVpG2rFX06vHpusi516ft4us1jei5TKOxupGy0GflPCIRRI-yrSlQYr8wN9RUFkBNgk9qwC=s160-c-k-c0x00ffffff-no-rj',
+      at: '@DAngeloveparis',
+      followers: '1,92 k',
+    },
+    {
+      id: 2,
+      name: 'Tomy',
+      image:
+        'https://yt3.googleusercontent.com/4rSXoW6AUEPvWHwyGLNJEO41mweWRdQ4KqFHwbBAYOwIBZJQZkimg558wcz3A2wt8g6xUq9B=s160-c-k-c0x00ffffff-no-rj',
+      at: '@TomyMotiv',
+      followers: '260',
     },
     {
       id: 3,
-      name: 'Arthur Mosa',
-      image:
-        'https://yt3.googleusercontent.com/S0quWyDjk8dNQ5KU3CvzFP4Bz3qrz35RMZ4m_TGc-S5redn5-6v662wlO_MRkLjIqmXxyXxFUng=s160-c-k-c0x00ffffff-no-rj',
-      at: '@arthurmosa',
-      followers: '390 k',
+      name: 'Angelo',
+      image: '/images/angelo.jpg',
+      at: '@angelorodrigues__',
+      followers: '12,9 k',
     },
     {
       id: 4,
-      name: 'Carolin Arthaud Immobilier',
-      image:
-        'https://yt3.googleusercontent.com/tZWUtk7dwsEydZDtOXnk2cxEpZPldvouzlhzTGfDbopC1JsydkCub1WxnRuxrrDqK143cLR2hg=s160-c-k-c0x00ffffff-no-rj',
-      at: '@carolinarthaudimmobilier',
-      followers: '19,4 k',
-    },
-    {
-      id: 5,
-      name: 'Nassim Boukrouh',
-      image:
-        'https://yt3.googleusercontent.com/lYzc-8I2cYYje_TQO8f9vdw9NEsHdHS_cl8ewXoGlnj2TRkCRcjNSjAnItJF1j4sGtPxo3Onig=s160-c-k-c0x00ffffff-no-rj',
-      at: '@nassimboukrouh',
-      followers: '2,06 k',
-    },
-    {
-      id: 7,
       name: 'Jordan Girbon',
       image:
         'https://yt3.googleusercontent.com/8ODhz1R1OR5zACZ0b8Dg2z2eaQHEaEXp6sAQtwjgFdDw89cVtNUeK8gcyrv-n4ErUWYN8ILs=s160-c-k-c0x00ffffff-no-rj',
@@ -76,63 +67,73 @@ export const WorkWithTicker = () => {
         </ScrollAnimated>
         <ScrollAnimated delay={0.3}>
           <div className="overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] relative w-full">
-          <motion.div
-            ref={scrollRef}
-            className="flex md:opacity-80"
-            animate={{
-              x: scrollWidth ? [0, -scrollWidth] : 0,
-            }}
-            transition={{
-              duration: 40,
-              ease: 'linear',
-              repeat: Infinity,
-              repeatType: 'loop',
-            }}
-          >
-            <div className="flex gap-24 pr-24">
-              {channels.map((channel) => (
-                <div
-                  key={channel.id}
-                  className="flex flex-row items-center gap-3 flex-shrink-0 group hover:scale-105 transition-all duration-300"
-                >
-                  <Avatar className="size-10 relative">
-                    <AvatarImage src={channel.image} />
-                    <AvatarFallback>{channel.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <span className="whitespace-nowrap text-white group-hover:text-white/90 transition-colors duration-300">
-                      {channel.name}
-                    </span>
-                    <span className="text-sm text-[#BCBCBC] whitespace-nowrap group-hover:text-white/70 transition-colors duration-300">
-                      {channel.at} • {channel.followers} abonnés
-                    </span>
+            <motion.div
+              ref={scrollRef}
+              className="flex md:opacity-80"
+              animate={{
+                x: scrollWidth ? [0, -scrollWidth] : 0,
+              }}
+              transition={{
+                duration: 40,
+                ease: 'linear',
+                repeat: Infinity,
+                repeatType: 'loop',
+              }}
+            >
+              <div className="flex gap-24 pr-24">
+                {channels.map((channel) => (
+                  <div
+                    key={channel.id}
+                    className="flex flex-row items-center gap-3 flex-shrink-0 group hover:scale-105 transition-all duration-300"
+                  >
+                    <Avatar className="size-10 relative">
+                      <AvatarImage src={channel.image} />
+                      <AvatarFallback>
+                        {channel.name
+                          .split(' ')
+                          .map((n) => n[0])
+                          .join('')}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className="flex flex-col">
+                      <span className="whitespace-nowrap text-white group-hover:text-white/90 transition-colors duration-300">
+                        {channel.name}
+                      </span>
+                      <span className="text-sm text-[#BCBCBC] whitespace-nowrap group-hover:text-white/70 transition-colors duration-300">
+                        {channel.at} • {channel.followers} abonnés
+                      </span>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
 
-            <div className="flex gap-24 pr-24">
-              {channels.map((channel) => (
-                <div
-                  key={`${channel.id}-copy`}
-                  className="flex flex-row items-center gap-3 flex-shrink-0 group hover:scale-105 transition-all duration-300"
-                >
-                  <Avatar className="size-10 relative">
-                    <AvatarImage src={channel.image} />
-                    <AvatarFallback>{channel.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <span className="whitespace-nowrap text-white group-hover:text-white/90 transition-colors duration-300">
-                      {channel.name}
-                    </span>
-                    <span className="text-sm text-[#BCBCBC] whitespace-nowrap group-hover:text-white/70 transition-colors duration-300">
-                      {channel.at} • {channel.followers} abonnés
-                    </span>
+              <div className="flex gap-24 pr-24">
+                {channels.map((channel) => (
+                  <div
+                    key={`${channel.id}-copy`}
+                    className="flex flex-row items-center gap-3 flex-shrink-0 group hover:scale-105 transition-all duration-300"
+                  >
+                    <Avatar className="size-10 relative">
+                      <AvatarImage src={channel.image} />
+                      <AvatarFallback>
+                        {channel.name
+                          .split(' ')
+                          .map((n) => n[0])
+                          .join('')}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className="flex flex-col">
+                      <span className="whitespace-nowrap text-white group-hover:text-white/90 transition-colors duration-300">
+                        {channel.name}
+                      </span>
+                      <span className="text-sm text-[#BCBCBC] whitespace-nowrap group-hover:text-white/70 transition-colors duration-300">
+                        {channel.at} • {channel.followers} abonnés
+                      </span>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </ScrollAnimated>
       </div>
