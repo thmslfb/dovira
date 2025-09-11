@@ -1,7 +1,9 @@
 'use client'
 
+import { MessageCircle } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'motion/react'
 import { useEffect, useRef, useState } from 'react'
+import { Button, Card, CardContent } from '../ui'
 import { SectionTitle } from '../ui/section-title'
 
 interface StepItemProps {
@@ -185,6 +187,56 @@ export const Steps = () => {
             </div>
           </div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="mt-24 md:mt-24"
+        >
+          <Card className="bg-[#0f0f0f]/90 border-[rgb(229,208,255)]/30 hover:border-[rgb(229,208,255)]/50 transition-all duration-500 hover:shadow-lg hover:shadow-[rgb(229,208,255)]/10 group hover:-translate-y-1">
+            <CardContent className="p-6 md:p-8">
+              <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+                <div className="flex-shrink-0">
+                  <div className="p-3 rounded-full bg-gradient-to-br from-[rgb(229,208,255)]/15 to-[rgb(243,232,255)]/8 border border-[rgb(229,208,255)]/30 group-hover:bg-gradient-to-br group-hover:from-[rgb(229,208,255)]/20 group-hover:to-[rgb(243,232,255)]/12 transition-all duration-500">
+                    <MessageCircle className="size-8 text-[rgb(229,208,255)]" />
+                  </div>
+                </div>
+
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-xl md:text-2xl font-semibold text-white mb-2 group-hover:text-[rgb(229,208,255)] transition-colors duration-300">
+                    Besoin d&apos;une solution sur mesure ?
+                  </h3>
+                  <p className="text-[#BCBCBC] text-sm md:text-base max-w-xl">
+                    Tu as un projet spécifique ou des besoins particuliers ?
+                    Contacte-moi directement pour une proposition personnalisée
+                    adaptée à tes objectifs.
+                  </p>
+                </div>
+
+                <div className="flex-shrink-0">
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="ghost"
+                    className="!bg-gradient-to-r !from-[rgb(111,0,255)] !via-[rgb(111,0,255)] !to-[rgb(111,0,255)] text-white hover:opacity-90 !border-none shadow-lg transition-all duration-300 relative overflow-hidden cursor-pointer"
+                  >
+                    <a
+                      href="https://calendly.com/khalidcapron"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      Me contacter
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#0a0a0a] pointer-events-none z-20" />

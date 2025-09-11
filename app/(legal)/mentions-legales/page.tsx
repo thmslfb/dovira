@@ -2,14 +2,7 @@
 
 import { AnimatedGroup } from '@/components/animations'
 import { Button } from '@/components/ui'
-import {
-  ArrowLeft,
-  Clock,
-  FileText,
-  Globe,
-  Mail,
-  MapPin,
-} from 'lucide-react'
+import { ArrowLeft, Clock, FileText, Globe, Mail, MapPin } from 'lucide-react'
 import { motion } from 'motion/react'
 import Link from 'next/link'
 

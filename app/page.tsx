@@ -2,7 +2,6 @@ import {
   FAQ,
   Header,
   Hero,
-  Pricing,
   Stats,
   Steps,
   Testimonials,
@@ -28,7 +27,7 @@ export default function Home() {
         <WorkWithMe />
         <Testimonials />
         <Steps />
-        <Pricing />
+        {/* <Pricing /> */}
         <FAQ />
         <TestimonialsVideo />
       </main>

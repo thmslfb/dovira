@@ -43,7 +43,6 @@ export default function CGVPage() {
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-[rgb(200,140,255)]/6 blur-3xl animate-pulse"
           style={{ animationDelay: '1.5s', animationDuration: '7s' }}
         />
-
       </div>
 
       <div className="relative mx-auto max-w-6xl px-9 lg:px-12 z-10">
@@ -199,7 +198,7 @@ export default function CGVPage() {
               </div>
               <div className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-[rgb(229,208,255)]/10 border border-[rgb(229,208,255)]/20 rounded-lg p-4">
+                  {/* <div className="bg-[rgb(229,208,255)]/10 border border-[rgb(229,208,255)]/20 rounded-lg p-4">
                     <h3 className="text-[rgb(229,208,255)] font-medium mb-2">
                       Packs standardisés
                     </h3>
@@ -209,7 +208,7 @@ export default function CGVPage() {
                       <li>• Pas de devis nécessaire</li>
                       <li>• Démarrage sous 24-48h</li>
                     </ul>
-                  </div>
+                  </div> */}
 
                   <div className="bg-[#0a0a0a]/50 border border-[rgb(229,208,255)]/20 rounded-lg p-4">
                     <h3 className="text-[rgb(229,208,255)] font-medium mb-2">
@@ -270,7 +269,7 @@ export default function CGVPage() {
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="text-[rgb(229,208,255)] font-medium text-lg">
+                  {/* <h3 className="text-[rgb(229,208,255)] font-medium text-lg">
                     Nos packs :
                   </h3>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -301,7 +300,7 @@ export default function CGVPage() {
                         20 Réels + 6 Vidéos pub + 3 YouTube
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="space-y-3">
@@ -309,18 +308,6 @@ export default function CGVPage() {
                     Modalités de paiement :
                   </p>
                   <ul className="space-y-3 text-[#BCBCBC]">
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[rgb(180,120,255)] mt-2" />
-                      <span>Paiement intégral à la commande (via Stripe)</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[rgb(180,120,255)] mt-2" />
-                      <span>Paiement sécurisé par carte bancaire</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[rgb(180,120,255)] mt-2" />
-                      <span>Facturation immédiate après paiement</span>
-                    </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 rounded-full bg-[rgb(180,120,255)] mt-2" />
                       <span>Projets sur mesure : devis personnalisé</span>
@@ -337,8 +324,9 @@ export default function CGVPage() {
 
                 <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4">
                   <p className="text-green-400 text-sm">
-                    <strong>Avantage :</strong> Paiement sécurisé en ligne, pas
-                    d&apos;acompte à gérer, démarrage immédiat du projet.
+                    <strong>Avantage :</strong> Paiement simple par facture,
+                    conditions définies dans le devis, démarrage du projet dès
+                    validation.
                   </p>
                 </div>
 
