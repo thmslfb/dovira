@@ -1,6 +1,12 @@
 import { Footer } from '@/components/sections/footer'
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono, Montserrat, Playfair_Display, Syne } from 'next/font/google'
+import {
+  Geist,
+  Geist_Mono,
+  Montserrat,
+  Playfair_Display,
+  Syne,
+} from 'next/font/google'
 import './globals.css'
 
 const geistSans = Geist({
@@ -105,7 +111,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${playfair.variable} ${montserrat.variable} antialiased bg-[#0a0a0a] text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${playfair.variable} ${montserrat.variable} antialiased bg-[#0a0a0a] text-white overflow-x-clip`}
       >
         {children}
         <Footer />
