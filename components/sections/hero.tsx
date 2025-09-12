@@ -152,7 +152,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="mt-8 text-4xl md:text-5xl md:mt-16 max-w-2xl md:max-w-xl tracking-tighter md:tracking-tight font-semibold"
+            className="mt-8 text-4xl md:text-5xl md:mt-16 max-w-2xl md:max-w-xl tracking-tighter md:tracking-tight font-semibold leading-[1.15] md:leading-[1.15]"
             suppressHydrationWarning
             style={{
               background:
@@ -162,7 +162,7 @@ export const Hero = () => {
               backgroundClip: 'text',
             }}
           >
-            Ton monteur vidéo pour scaler ton business.
+            Ton contenu mérite plus qu&apos;un simple montage.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -170,9 +170,10 @@ export const Hero = () => {
             transition={{ duration: 0.4, delay: 0.3 }}
             className="mt-5 -pr-9 text-base md:text-base font-light sm:max-w-md md:max-w-[35rem] tracking-tight text-[#BCBCBC]"
           >
-            Tu crées le contenu. Je le transforme en vidéos captivantes qui
-            boostent ton image et tes résultats. Gagne en temps et en sérénité
-            avec un monteur dédié qui comprend ton univers.
+            Avec Dovira, ton agence de montage vidéo, chaque vidéo est conçue
+            pour capter l&apos;attention, renforcer ton images et générer des
+            résultats. Notre équipe dédiée s&apos;adapte à ton univers pour
+            t&apos;aider à scaler ton business plus vite.
           </motion.p>
 
           <AnimatedGroup
