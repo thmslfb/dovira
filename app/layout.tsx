@@ -38,12 +38,14 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'Dovira - Monteur Vidéo Professionnel | Reels, Ads, YouTube',
+  title:
+    'Agence de montage vidéo – Dovira | Réels, TikTok, Ads, YouTube',
   description:
-    'Monteur vidéo professionnel spécialisé en Reels, publicités et vidéos YouTube. Livraison sous 72h, satisfaction garantie. Transformez vos contenus en vidéos qui convertissent.',
+    "Agence de montage vidéo spécialisée en formats courts et publicitaires. Réels, TikTok, Shorts, Ads, YouTube. Livraison 72h. Devis sur-mesure.",
   keywords: [
     'monteur vidéo',
     'montage vidéo professionnel',
+    'agence de montage vidéo',
     'création reels',
     'vidéo publicitaire',
     'montage YouTube',
@@ -64,9 +66,9 @@ export const metadata: Metadata = {
     canonical: 'https://dovira.fr',
   },
   openGraph: {
-    title: 'Dovira - Monteur Vidéo Professionnel',
+    title: 'Agence de montage vidéo – Dovira',
     description:
-      'Spécialiste du montage vidéo pour créateurs et entreprises. Reels, publicités, YouTube - Livraison sous 72h.',
+      'Agence spécialisée en montage vidéo pour créateurs et marques. Réels, TikTok, Ads, YouTube – Livraison 72h.',
     url: 'https://dovira.fr',
     siteName: 'Dovira',
     locale: 'fr_FR',
@@ -76,15 +78,15 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Dovira - Monteur Vidéo Professionnel',
+        alt: 'Agence de montage vidéo – Dovira',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dovira - Monteur Vidéo Professionnel',
+    title: 'Agence de montage vidéo – Dovira',
     description:
-      'Spécialiste du montage vidéo pour créateurs et entreprises. Reels, publicités, YouTube - Livraison sous 72h.',
+      'Réels, TikTok, Ads, YouTube. Livraison 72h. Devis sur-mesure.',
     images: ['/og-image.jpg'],
   },
   robots: {
