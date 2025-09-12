@@ -73,6 +73,7 @@ export const TestimonialsVideo = () => {
                             style={{ border: 'none', objectFit: 'cover' }}
                             allow="autoplay; fullscreen; picture-in-picture"
                             allowFullScreen
+                            title={`Témoignage client Dovira – Vimeo ${video.vimeoId}`}
                           />
                         </div>
                       ) : (
@@ -121,7 +122,7 @@ export const TestimonialsVideo = () => {
                               video.thumbnail ||
                               `https://vumbnail.com/${video.vimeoId}.jpg`
                             }
-                            alt="Thumbnail vidéo témoignage"
+                            alt={`Témoignage client – Agence de montage vidéo Dovira – Vimeo ${video.vimeoId}`}
                             fill
                             className="object-cover rounded-xl"
                           />

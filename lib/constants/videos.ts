@@ -2,32 +2,32 @@ export const PORTFOLIO_VIDEOS = [
   {
     id: 1,
     thumbnail: '/images/video-thumbnail-3-new.png',
-    vimeoId: '1118019433',
-    alt: 'Video 1',
+    vimeoId: '1111361186',
+    alt: "Agence de montage vidéo – Réels 9/16 – Portfolio Dovira #1",
   },
   {
     id: 2,
     thumbnail: '/images/video-thumbnail-1.png',
     vimeoId: '1108016789',
-    alt: 'Video 1',
+    alt: "Agence de montage vidéo – Réels 9/16 – Portfolio Dovira #2",
   },
   {
     id: 3,
     thumbnail: '/images/video-thumbnail-2.png',
     vimeoId: '1102200706',
-    alt: 'Video 2',
+    alt: "Agence de montage vidéo – Réels 9/16 – Portfolio Dovira #3",
   },
   {
     id: 4,
     thumbnail: '/images/video-thumbnail-5.png',
     vimeoId: '1108015936',
-    alt: 'Video 3',
+    alt: "Agence de montage vidéo – Réels 9/16 – Portfolio Dovira #4",
   },
   {
     id: 5,
     thumbnail: '/images/video-thumbnail-4.png',
     vimeoId: '1107823882',
-    alt: 'Video 4',
+    alt: "Agence de montage vidéo – Réels 9/16 – Portfolio Dovira #5",
   },
 ] as const
 

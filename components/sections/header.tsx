@@ -48,7 +48,7 @@ export const Header = () => {
               <div className="flex items-center gap-1">
                 <Image
                   src="/images/logo-2.png"
-                  alt="logo"
+                  alt="Dovira – Agence de montage vidéo (logo)"
                   width={40}
                   height={40}
                 />
