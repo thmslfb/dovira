@@ -32,7 +32,7 @@ export const Footer = () => {
               </span>
             </Link>
             <p className="text-sm max-w-xs leading-relaxed text-[#BCBCBC]">
-              Ton monteur vidéo pour scaler ton business.
+              Ton contenu mérite plus qu&apos;un simple montage.
             </p>
             <div className="flex items-center gap-2 mt-2">
               <div className="w-2 h-2 rounded-full bg-[rgb(180,120,255)]" />
