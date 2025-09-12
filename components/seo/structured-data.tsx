@@ -1,96 +1,37 @@
 export const StructuredData = () => {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: 'Dovira',
-    description:
-      'Monteur vidéo professionnel spécialisé en Reels, publicités et vidéos YouTube. Livraison sous 72h, satisfaction garantie.',
-    url: 'https://dovira.fr',
-    logo: 'https://dovira.fr/logo.png',
-    image: 'https://dovira.fr/og-image.jpg',
-    serviceType: 'Montage vidéo professionnel',
-    provider: {
-      '@type': 'Person',
-      name: 'Dovira',
-      jobTitle: 'Monteur vidéo professionnel',
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'France',
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Services de montage vidéo',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Pack Starter',
-            description:
-              '5 Reels dynamiques sous-titrés + 1 Vidéo publicitaire + effets et animations inclus',
-          },
-          price: '270',
-          priceCurrency: 'EUR',
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Pack Growth',
-            description:
-              '10 Reels optimisés + 3 Vidéos publicitaires + montage professionnel multi-plateformes',
-          },
-          price: '700',
-          priceCurrency: 'EUR',
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Pack Pro',
-            description:
-              '20 Reels impactants + 6 Vidéos publicitaires + 3 Vidéos YouTube + stratégie complète',
-          },
-          price: '1600',
-          priceCurrency: 'EUR',
-        },
-      ],
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer service',
-      availableLanguage: 'French',
-    },
-    sameAs: [
-      // Ajoutez ici vos réseaux sociaux
-      // 'https://www.instagram.com/dovira',
-      // 'https://www.youtube.com/@dovira',
-      // 'https://www.linkedin.com/company/dovira',
-    ],
-  }
-
   const organizationData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Dovira',
     url: 'https://dovira.fr',
-    logo: 'https://dovira.fr/logo.png',
+    logo: 'https://dovira.fr/images/logo.png',
     description:
-      'Agence spécialisée en montage vidéo pour créateurs et entreprises',
-    founder: {
-      '@type': 'Person',
-      name: 'Dovira',
+      "Agence de montage vidéo spécialisée en formats courts et publicitaires (Réels, TikTok, Ads, YouTube). Livraison 72h. Devis sur-mesure.",
+    sameAs: ['https://www.instagram.com/agence_dovira/'],
+    areaServed: {
+      '@type': 'Country',
+      name: 'France',
     },
-    knowsAbout: [
-      'Montage vidéo',
-      'Création de Reels',
-      'Vidéos publicitaires',
-      'Montage YouTube',
-      'Video marketing',
-      'Effets visuels',
-      'Post-production',
-    ],
+  }
+
+  const serviceData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Agence de montage vidéo',
+    provider: {
+      '@type': 'Organization',
+      name: 'Dovira',
+      url: 'https://dovira.fr',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'France',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://dovira.fr',
+      availableLanguage: ['fr'],
+    },
   }
 
   const faqData = {
@@ -102,7 +43,8 @@ export const StructuredData = () => {
         name: 'Quels types de vidéos peux-tu monter ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Je réalise tous types de montages : vidéos courtes (Réels, TikTok, Shorts), publicités (Ads), vidéos YouTube longues, VSL, et bien plus. Je m\'adapte à tous les formats et styles selon ton besoin.',
+          text:
+            "Je réalise tous types de montages : vidéos courtes (Réels, TikTok, Shorts), publicités (Ads), vidéos YouTube longues, VSL, et bien plus. Je m’adapte à tous les formats et styles selon ton besoin.",
         },
       },
       {
@@ -110,7 +52,8 @@ export const StructuredData = () => {
         name: 'Quels sont tes délais de livraison ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Je m\'engage à te livrer la vidéo finale sous un maximum de 72 heures après réception des rushs et du brief. La rapidité et la qualité sont mes priorités.',
+          text:
+            "Je m’engage à te livrer la vidéo finale sous un maximum de 72 heures après réception des rushs et du brief.",
         },
       },
       {
@@ -118,7 +61,8 @@ export const StructuredData = () => {
         name: 'Comment fonctionnent tes tarifs ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Pas d\'abonnement : tu choisis simplement le pack qui te correspond et tu payes directement en ligne via Stripe. Si tu as besoin d\'une solution sur-mesure, contacte-moi : je préparerai alors un devis clair et transparent adapté à ton projet.',
+          text:
+            "Pas d’abonnement : les prestations se font sur devis. Contacte-moi pour discuter de ton besoin et je te proposerai un devis clair et transparent adapté à ton projet.",
         },
       },
     ],
@@ -128,11 +72,11 @@ export const StructuredData = () => {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceData) }}
       />
       <script
         type="application/ld+json"
