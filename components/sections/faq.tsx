@@ -47,7 +47,7 @@ const items: FAQItem[] = [
     id: '5',
     title: 'Comment fonctionnent tes tarifs ?',
     content:
-      'Pas d’abonnement : tu choisis simplement le pack qui te correspond et tu payes directement en ligne via Stripe. Si tu as besoin d’une solution sur-mesure, contacte-moi : je préparerai alors un devis clair et transparent adapté à ton projet.',
+      'Pas d’abonnement : les prestations se font sur devis. Contacte-moi pour discuter de ton besoin et je te proposerai un devis clair et transparent adapté à ton projet.',
   },
   {
     id: '6',
@@ -169,7 +169,8 @@ export const FAQ = () => {
                 </h3>
 
                 <p className="text-base md:text-lg text-[#BCBCBC] max-w-2xl mx-auto leading-relaxed mt-6 group-hover:text-white/90 transition-colors duration-300">
-                  Transformons tes idées en vidéos qui captivent, engagent et convertissent.
+                  Transformons tes idées en vidéos qui captivent, engagent et
+                  convertissent.
                   <br />
                   <span className="text-[rgb(229,208,255)] font-semibold">
                     Ton succès commence maintenant.
@@ -183,7 +184,12 @@ export const FAQ = () => {
                   size="default"
                   className="group/btn relative overflow-hidden bg-gradient-to-r from-[rgb(120,0,255)] via-[#a855ff] to-[rgb(120,0,255)] text-white font-semibold py-3 px-6 text-sm border-none shadow-lg shadow-[rgb(120,0,255)]/50 transition-all duration-300 "
                 >
-                  <Link href="https://calendly.com/khalidcapron" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <Link
+                    href="https://calendly.com/khalidcapron"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
                     <span>Réserver un appel</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
                   </Link>
