@@ -1,3 +1,4 @@
+import { Instagram } from 'lucide-react'
 import Link from 'next/link'
 import { Separator } from '../ui/separator'
 
@@ -91,6 +92,16 @@ export const Footer = () => {
                 className="font-light text-[#BCBCBC] hover:text-[rgb(229,208,255)] transition-all duration-300 hover:translate-x-1 text-sm"
               >
                 Réserver un appel
+              </Link>
+              <Link
+                href="https://www.instagram.com/agence_dovira/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram Dovira"
+                className="font-light text-[#BCBCBC] hover:text-[rgb(229,208,255)] transition-all duration-300 hover:translate-x-1 text-sm inline-flex items-center gap-2"
+              >
+                <Instagram className="w-4 h-4" />
+                Instagram
               </Link>
             </div>
           </div>
