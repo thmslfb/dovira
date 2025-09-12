@@ -38,10 +38,9 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title:
-    'Agence de montage vidéo – Dovira | Réels, TikTok, Ads, YouTube',
+  title: 'Agence de montage vidéo – Dovira | Réels, TikTok, Ads, YouTube',
   description:
-    "Agence de montage vidéo spécialisée en formats courts et publicitaires. Réels, TikTok, Shorts, Ads, YouTube. Livraison 72h. Devis sur-mesure.",
+    'Agence de montage vidéo spécialisée en formats courts et publicitaires. Réels, TikTok, Shorts, Ads, YouTube. Livraison 72h. Devis sur-mesure.',
   keywords: [
     'monteur vidéo',
     'montage vidéo professionnel',

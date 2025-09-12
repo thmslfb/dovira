@@ -6,7 +6,7 @@ export const StructuredData = () => {
     url: 'https://dovira.fr',
     logo: 'https://dovira.fr/images/logo.png',
     description:
-      "Agence de montage vidéo spécialisée en formats courts et publicitaires (Réels, TikTok, Ads, YouTube). Livraison 72h. Devis sur-mesure.",
+      'Agence de montage vidéo spécialisée en formats courts et publicitaires (Réels, TikTok, Ads, YouTube). Livraison 72h. Devis sur-mesure.',
     sameAs: ['https://www.instagram.com/agence_dovira/'],
     areaServed: {
       '@type': 'Country',
@@ -43,8 +43,7 @@ export const StructuredData = () => {
         name: 'Quels types de vidéos peux-tu monter ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text:
-            "Je réalise tous types de montages : vidéos courtes (Réels, TikTok, Shorts), publicités (Ads), vidéos YouTube longues, VSL, et bien plus. Je m’adapte à tous les formats et styles selon ton besoin.",
+          text: 'Je réalise tous types de montages : vidéos courtes (Réels, TikTok, Shorts), publicités (Ads), vidéos YouTube longues, VSL, et bien plus. Je m’adapte à tous les formats et styles selon ton besoin.',
         },
       },
       {
@@ -52,8 +51,7 @@ export const StructuredData = () => {
         name: 'Quels sont tes délais de livraison ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text:
-            "Je m’engage à te livrer la vidéo finale sous un maximum de 72 heures après réception des rushs et du brief.",
+          text: 'Je m’engage à te livrer la vidéo finale sous un maximum de 72 heures après réception des rushs et du brief.',
         },
       },
       {
@@ -61,8 +59,7 @@ export const StructuredData = () => {
         name: 'Comment fonctionnent tes tarifs ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text:
-            "Pas d’abonnement : les prestations se font sur devis. Contacte-moi pour discuter de ton besoin et je te proposerai un devis clair et transparent adapté à ton projet.",
+          text: 'Pas d’abonnement : les prestations se font sur devis. Contacte-moi pour discuter de ton besoin et je te proposerai un devis clair et transparent adapté à ton projet.',
         },
       },
     ],
