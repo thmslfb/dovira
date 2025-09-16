@@ -1,5 +1,9 @@
 export const menuItems = [
-  { name: 'Réalisations', href: '/#work' },
+  {
+    name: 'Réalisations',
+    href: 'https://dovira.myportfolio.com/',
+    target: '_blank',
+  },
   { name: 'Témoignages', href: '/#testimonials' },
   // { name: 'Tarifs', href: '/#pricing' },
   { name: 'FAQ', href: '/#faq' },

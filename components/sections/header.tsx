@@ -64,6 +64,7 @@ export const Header = () => {
                   <li key={index}>
                     <Link
                       href={item.href}
+                      target={item.target}
                       className="duration-150 transition-colors text-[#BCBCBC] hover:text-[rgb(229,208,255)]"
                     >
                       {item.name}
