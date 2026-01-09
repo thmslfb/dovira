@@ -120,8 +120,6 @@ export function VideoCarousel({
             <VideoCard
               key={`${video.id}-${index}`}
               videoPath={video.videoPath}
-              title={video.title}
-              subtitle={video.subtitle}
               poster={video.poster}
               onHoverChange={handleCardHoverChange}
             />

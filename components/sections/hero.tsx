@@ -238,7 +238,7 @@ export const Hero = () => {
                 <div className="relative rounded-xl overflow-hidden bg-black/20 backdrop-blur-sm">
                   <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                     <iframe
-                      src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=1&modestbranding=1&rel=0&showinfo=0"
+                      src="https://www.youtube.com/embed/CwzFRpU7Weo?controls=1&modestbranding=1&rel=0&showinfo=0"
                       className="absolute top-0 left-0 w-full h-full rounded-xl"
                       style={{ border: 'none' }}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

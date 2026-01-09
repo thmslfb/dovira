@@ -5,13 +5,11 @@ import { motion } from 'motion/react';
 
 interface VideoCardProps {
   videoPath: string;
-  title: string;
-  subtitle: string;
   poster?: string;
   onHoverChange: (isHovered: boolean) => void;
 }
 
-export function VideoCard({ videoPath, title, subtitle, poster, onHoverChange }: VideoCardProps) {
+export function VideoCard({ videoPath, poster, onHoverChange }: VideoCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [showControls, setShowControls] = useState(false); // État pour les contrôles
   const [isPlaying, setIsPlaying] = useState(false); // État de lecture
