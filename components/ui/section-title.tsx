@@ -8,18 +8,22 @@ export const SectionTitle = ({
   className,
   showAccent = true,
   level = 'h2',
+  noGlow = false,
 }: {
   children: React.ReactNode
   className?: string
   showAccent?: boolean
   level?: HeadingLevel
+  noGlow?: boolean
 }) => {
   const HeadingTag = level as keyof React.JSX.IntrinsicElements
 
   return (
-    <div className="relative">
+    <div className={cn('relative', className)}>
       {/* Subtle background glow */}
-      <div className="absolute -inset-4 bg-[rgb(180,120,255)]/8 blur-2xl rounded-2xl opacity-50" />
+      {!noGlow && (
+        <div className="absolute -inset-4 bg-[rgb(180,120,255)]/8 blur-2xl rounded-2xl opacity-50" />
+      )}
 
       <HeadingTag
         className={cn(

@@ -10,7 +10,7 @@ import {
   WorkWithMe,
 } from '@/components/sections'
 import { StructuredData } from '@/components/seo'
-import { VideoCarousel } from '@/components/sections/video-carousel'
+import { VideoCarouselSection } from '@/components/sections/video-carousel'
 
 const videos = [
   {
@@ -66,10 +66,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <VideoCarousel 
-          videos={videos}
-          backgroundColor="rgba(10, 10, 10, 1)" // Couleur sombre du site au lieu du blanc
-        />
+        <VideoCarouselSection />
         <WhyChooseUs />
         <Stats />
         <WorkWithMe />

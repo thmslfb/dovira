@@ -96,7 +96,146 @@ export const Testimonials = () => {
 				</ScrollAnimated>
 
 				<ScrollAnimated delay={0.2}>
-					<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+					{/* Mobile & Tablette: Carousel horizontal */}
+					<div className="lg:hidden">
+						{/* Featured */}
+						{testimonials
+							.filter((t) => t.featured)
+							.map((testimonial) => (
+								<Card
+									key={testimonial.id}
+									className="mb-6 relative bg-[#0f0f0f]/90 backdrop-blur-sm border-[rgb(229,208,255)]/30 hover:shadow-[rgb(229,208,255)]/20 transition-all duration-500 group overflow-hidden p-6"
+								>
+									<div className="absolute inset-0 bg-gradient-to-br from-[rgb(180,120,255)]/8 via-[#0f0f0f]/50 to-[rgb(160,100,255)]/12 pointer-events-none" />
+									<div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[rgb(229,208,255)]/5 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+									<CardContent className="h-full p-0 relative z-10">
+										<div className="flex flex-col h-full justify-between gap-6">
+											<div className="space-y-4">
+												<div className="p-2.5 rounded-full bg-[rgb(180,120,255)]/30 shadow-lg w-fit">
+													<Quote className="size-5 fill-[rgb(180,120,255)] text-[rgb(180,120,255)]" />
+												</div>
+												<p className="text-lg font-medium text-[#BCBCBC] group-hover:text-white transition-colors duration-300 leading-relaxed">
+													{testimonial.content}
+												</p>
+												<div className="flex items-center gap-1">
+													{[...Array(testimonial.rating)].map((_, i) => (
+														<Star
+															key={i}
+															className="size-4 text-[rgb(180,120,255)] fill-[rgb(180,120,255)]"
+														/>
+													))}
+												</div>
+											</div>
+
+											<div className="grid grid-cols-[auto_1fr] items-center gap-3">
+												<Avatar className="size-12 ring-2 ring-[rgb(229,208,255)]/40 ring-offset-2 ring-offset-[#0f0f0f]">
+													{testimonial.avatar ? (
+														<AvatarImage
+															src={testimonial.avatar}
+															alt={testimonial.name}
+															height="400"
+															width="400"
+															loading="lazy"
+														/>
+													) : null}
+													<AvatarFallback className="bg-[rgb(180,120,255)]/20 text-[rgb(180,120,255)] font-semibold">
+														{testimonial.name
+															.split(' ')
+															.map((n) => n[0])
+															.join('')}
+													</AvatarFallback>
+												</Avatar>
+
+												<div>
+													<p className="text-sm font-medium text-white">
+														{testimonial.name}
+													</p>
+													<span className="text-[#BCBCBC] block text-sm">
+														{testimonial.role}
+													</span>
+												</div>
+											</div>
+										</div>
+									</CardContent>
+								</Card>
+							))}
+
+						{/* Autres avis en carousel */}
+						<div className="relative -mx-9 md:-mx-13">
+							<div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 px-9 md:px-13 scrollbar-hide">
+								{testimonials
+									.filter((t) => !t.featured)
+									.map((testimonial, index) => (
+										<Card
+											key={testimonial.id}
+											className={`flex-shrink-0 w-[85vw] md:w-[70vw] snap-center relative bg-[#0f0f0f]/${
+												80 + index * 2
+											} backdrop-blur-sm border-[rgb(229,208,255)]/${
+												25 + index * 3
+											} hover:shadow-[rgb(229,208,255)]/${12 + index * 2} transition-all duration-${
+												350 + index * 50
+											} group overflow-hidden p-6`}
+										>
+											<div className="absolute inset-0 bg-gradient-to-br from-[rgb(180,120,255)]/${4 + index} via-[#0f0f0f]/30 to-[rgb(160,100,255)]/${6 + index} pointer-events-none" />
+											<div className="absolute inset-0 bg-gradient-to-tl from-transparent via-[rgb(229,208,255)]/2 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-350" />
+
+											<CardContent className="h-full p-0 relative z-10">
+												<div className="flex flex-col h-full justify-between gap-4">
+													<div className="space-y-3">
+														<div className="p-1.5 rounded-full bg-[rgb(180,120,255)]/20 shadow-sm w-fit">
+															<Quote className="size-3 fill-[rgb(180,120,255)] text-[rgb(180,120,255)]" />
+														</div>
+														<p className="text-sm text-[#BCBCBC] group-hover:text-white transition-colors duration-300 leading-relaxed">
+															{testimonial.content}
+														</p>
+														<div className="flex items-center gap-1">
+															{[...Array(testimonial.rating)].map((_, i) => (
+																<Star
+																	key={i}
+																	className="size-3 text-[rgb(180,120,255)] fill-[rgb(180,120,255)]"
+																/>
+															))}
+														</div>
+													</div>
+
+													<div className="grid items-center gap-3 [grid-template-columns:auto_1fr]">
+														<Avatar className="size-10 ring-2 ring-[rgb(229,208,255)]/30 ring-offset-2 ring-offset-[#0f0f0f]">
+															{testimonial.avatar ? (
+																<AvatarImage
+																	src={testimonial.avatar}
+																	alt={testimonial.name}
+																	height="400"
+																	width="400"
+																	loading="lazy"
+																/>
+															) : null}
+															<AvatarFallback className="bg-[rgb(180,120,255)]/15 text-[rgb(180,120,255)] font-semibold text-xs">
+																{testimonial.name
+																	.split(' ')
+																	.map((n) => n[0])
+																	.join('')}
+															</AvatarFallback>
+														</Avatar>
+														<div>
+															<p className="text-sm font-medium text-white">
+																{testimonial.name}
+															</p>
+															<span className="text-[#BCBCBC] block text-xs">
+																{testimonial.role}
+															</span>
+														</div>
+													</div>
+												</div>
+											</CardContent>
+										</Card>
+									))}
+							</div>
+						</div>
+					</div>
+
+					{/* Desktop uniquement: Grid */}
+					<div className="hidden lg:grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 						{/* Témoignage principal (featured) */}
 						{testimonials
 							.filter((t) => t.featured)
