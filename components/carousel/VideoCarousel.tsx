@@ -189,6 +189,30 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
               document.addEventListener('mousemove', handleMouseMove);
               document.addEventListener('mouseup', handleMouseUp);
             }}
+            onTouchStart={(e) => {
+              const content = contentRef.current;
+              if (!content) return;
+
+              isDragging.current = true;
+              const startX = e.touches[0].clientX;
+              const startTranslate = translateXRef.current;
+
+              const handleTouchMove = (e: TouchEvent) => {
+                const x = e.touches[0].clientX;
+                const walk = (x - startX);
+                translateXRef.current = startTranslate + walk;
+                content.style.transform = `translateX(${translateXRef.current}px)`;
+              };
+
+              const handleTouchEnd = () => {
+                isDragging.current = false;
+                document.removeEventListener('touchmove', handleTouchMove);
+                document.removeEventListener('touchend', handleTouchEnd);
+              };
+
+              document.addEventListener('touchmove', handleTouchMove, { passive: true });
+              document.addEventListener('touchend', handleTouchEnd);
+            }}
           >
             <div 
               ref={setContentRef}
