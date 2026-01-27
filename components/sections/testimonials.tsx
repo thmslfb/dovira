@@ -162,22 +162,16 @@ export const Testimonials = () => {
 							))}
 
 						{/* Autres avis en carousel */}
-						<div className="relative -mx-9 md:-mx-13">
-							<div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 px-9 md:px-13 scrollbar-hide">
-								{testimonials
-									.filter((t) => !t.featured)
-									.map((testimonial, index) => (
+						<div 
+							className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-9 px-9 md:-mx-13 md:px-13 scrollbar-hide touch-pan-x"
+						>
+							{testimonials.filter((t) => !t.featured).map((testimonial) => (
 										<Card
 											key={testimonial.id}
-											className={`flex-shrink-0 w-[85vw] md:w-[70vw] snap-center relative bg-[#0f0f0f]/${
-												80 + index * 2
-											} backdrop-blur-sm border-[rgb(229,208,255)]/${
-												25 + index * 3
-											} hover:shadow-[rgb(229,208,255)]/${12 + index * 2} transition-all duration-${
-												350 + index * 50
-											} group overflow-hidden p-6`}
+											data-card
+											className="flex-shrink-0 w-[85vw] md:w-[70vw] snap-center relative bg-[#0f0f0f]/80 backdrop-blur-sm border-[rgb(229,208,255)]/25 hover:shadow-[rgb(229,208,255)]/10 transition-all duration-300 group overflow-hidden p-6"
 										>
-											<div className="absolute inset-0 bg-gradient-to-br from-[rgb(180,120,255)]/${4 + index} via-[#0f0f0f]/30 to-[rgb(160,100,255)]/${6 + index} pointer-events-none" />
+											<div className="absolute inset-0 bg-gradient-to-br from-[rgb(180,120,255)]/5 via-[#0f0f0f]/30 to-[rgb(160,100,255)]/5 pointer-events-none" />
 											<div className="absolute inset-0 bg-gradient-to-tl from-transparent via-[rgb(229,208,255)]/2 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-350" />
 
 											<CardContent className="h-full p-0 relative z-10">
@@ -230,7 +224,6 @@ export const Testimonials = () => {
 											</CardContent>
 										</Card>
 									))}
-							</div>
 						</div>
 					</div>
 
@@ -302,18 +295,12 @@ export const Testimonials = () => {
 						{/* Témoignages secondaires */}
 						{testimonials
 							.filter((t) => !t.featured)
-							.map((testimonial, index) => (
+							.map((testimonial) => (
 								<Card
 									key={testimonial.id}
-									className={`relative bg-[#0f0f0f]/${
-										80 + index * 2
-									} backdrop-blur-sm border-[rgb(229,208,255)]/${
-										25 + index * 3
-									} hover:shadow-[rgb(229,208,255)]/${12 + index * 2} transition-all duration-${
-										350 + index * 50
-									} group overflow-hidden p-6`}
+									className="relative bg-[#0f0f0f]/80 backdrop-blur-sm border-[rgb(229,208,255)]/25 hover:shadow-[rgb(229,208,255)]/10 transition-all duration-300 group overflow-hidden p-6"
 								>
-									<div className="absolute inset-0 bg-gradient-to-br from-[rgb(180,120,255)]/${4 + index} via-[#0f0f0f]/30 to-[rgb(160,100,255)]/${6 + index} pointer-events-none" />
+									<div className="absolute inset-0 bg-gradient-to-br from-[rgb(180,120,255)]/5 via-[#0f0f0f]/30 to-[rgb(160,100,255)]/5 pointer-events-none" />
 									<div className="absolute inset-0 bg-gradient-to-tl from-transparent via-[rgb(229,208,255)]/2 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-350" />
 
 									<CardContent className="h-full p-0 relative z-10">

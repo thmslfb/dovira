@@ -7,8 +7,8 @@ export const videos = [
   },
   {
     id: '2',
-    videoPath: '/videos/video2.mp4',
-    poster: '/videos/video2-poster.jpg',
+    videoPath: '/videos/video6.mp4',
+    poster: '/videos/video6-poster.jpg',
   },
   {
     id: '3',
