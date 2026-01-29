@@ -4,7 +4,6 @@ import {
   Hero,
   Stats,
   Steps,
-  Testimonials,
   TestimonialsVideo,
   WhyChooseUs,
   WorkWithMe,
@@ -27,7 +26,6 @@ export default function Home() {
         <WhyChooseUs />
         <Stats />
         <WorkWithMe />
-        <Testimonials />
         <Steps />
         {/* <Pricing /> */}
         <FAQ />

@@ -12,14 +12,6 @@ export const WorkWithTicker = () => {
   const channels = [
     {
       id: 1,
-      name: "D'Angelo",
-      image:
-        'https://yt3.googleusercontent.com/5dVpG2rFX06vHpusi516ft4us1jei5TKOxupGy0GflPCIRRI-yrSlQYr8wN9RUFkBNgk9qwC=s160-c-k-c0x00ffffff-no-rj',
-      at: '@DAngeloveparis',
-      followers: '1,92 k',
-    },
-    {
-      id: 2,
       name: 'Tomy',
       image:
         'https://yt3.googleusercontent.com/4rSXoW6AUEPvWHwyGLNJEO41mweWRdQ4KqFHwbBAYOwIBZJQZkimg558wcz3A2wt8g6xUq9B=s160-c-k-c0x00ffffff-no-rj',
@@ -27,19 +19,11 @@ export const WorkWithTicker = () => {
       followers: '260',
     },
     {
-      id: 3,
+      id: 2,
       name: 'Angelo',
       image: '/images/angelo.jpg',
       at: '@angelorodrigues__',
       followers: '12,9 k',
-    },
-    {
-      id: 4,
-      name: 'Jordan Girbon',
-      image:
-        'https://yt3.googleusercontent.com/8ODhz1R1OR5zACZ0b8Dg2z2eaQHEaEXp6sAQtwjgFdDw89cVtNUeK8gcyrv-n4ErUWYN8ILs=s160-c-k-c0x00ffffff-no-rj',
-      at: '@jordangirbon',
-      followers: '14,8 k',
     },
   ]
 

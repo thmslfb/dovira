@@ -48,24 +48,25 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
 
   // Fonction d'auto-scroll
   const startAutoScroll = (element: HTMLDivElement) => {
+    console.log('[DEBUG] startAutoScroll called');
     const autoScroll = () => {
       const currentContent = contentRef.current;
       if (currentContent && !isDragging.current && !stopAutoScroll.current) {
         // Détecter isMobile à chaque frame pour être sûr
         const currentIsMobile = window.innerWidth < 768;
         const scrollSpeed = currentIsMobile ? 0.8 : 1.5;
-        
+
         translateXRef.current -= scrollSpeed;
-        
+
         // Calculer la largeur totale d'un set de vidéos (incluant les gaps)
         const cardWidth = currentIsMobile ? 180 + 24 : 320 + 24; // width + gap
         const totalWidth = cardWidth * videos.length;
-        
+
         // Boucle infinie : quand on a scrollé d'un set complet, on reset
         if (Math.abs(translateXRef.current) >= totalWidth) {
           translateXRef.current = 0;
         }
-        
+
         // Appliquer la transformation CSS (fonctionne sur Safari iOS)
         currentContent.style.transform = `translateX(${translateXRef.current}px)`;
       }
@@ -73,35 +74,44 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
     };
 
     // Démarrer immédiatement
+    console.log('[DEBUG] Starting requestAnimationFrame');
     animationFrameIdRef.current = requestAnimationFrame(autoScroll);
   };
 
-  // Callback ref pour démarrer l'animation dès que le DOM est prêt
-  const setContentRef = (element: HTMLDivElement | null) => {
-    contentRef.current = element;
-    
-    if (element && !animationFrameIdRef.current) {
-      startAutoScroll(element);
-    }
-  };
-
-  // Cleanup
+  // Démarrer l'animation après le montage du composant
   useEffect(() => {
-    return () => {
-      if (animationFrameIdRef.current) {
-        cancelAnimationFrame(animationFrameIdRef.current);
+    // Ne démarrer que si mounted et contentRef existe
+    if (!mounted) return;
+
+    // Attendre que le DOM soit prêt
+    const startAnimation = () => {
+      const content = contentRef.current;
+      if (content && !animationFrameIdRef.current) {
+        console.log('[AUTO-SCROLL] Starting animation');
+        startAutoScroll(content);
       }
     };
-  }, []);
+
+    // Démarrer avec un petit délai pour s'assurer que le DOM est prêt
+    const timeoutId = setTimeout(startAnimation, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      if (animationFrameIdRef.current) {
+        cancelAnimationFrame(animationFrameIdRef.current);
+        animationFrameIdRef.current = null;
+      }
+    };
+  }, [mounted, videos.length]);
 
   // Effet pour gérer la lecture de la vidéo en modal
   useEffect(() => {
     if (selectedVideo && modalVideoRef.current) {
       // Déterminer la bonne version de la vidéo
-      const videoSrc = isMobile 
+      const videoSrc = isMobile
         ? selectedVideo.videoPath.replace('.mp4', '-mobile.mp4')
         : selectedVideo.videoPath.replace('.mp4', '-desktop.mp4');
-      
+
       // Mettre à jour la source et relancer
       modalVideoRef.current.src = videoSrc;
       modalVideoRef.current.currentTime = 0;
@@ -119,42 +129,28 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
         backgroundColor: '#0a0a0a',
       }}
     >
-      {/* Grid Pattern Background */}
+      {/* Glows */}
       <div
-        className="absolute inset-0 opacity-5"
+        className="absolute pointer-events-none"
         style={{
-          backgroundImage: `
-            linear-gradient(rgba(180, 120, 255, 0.3) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(180, 120, 255, 0.3) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px',
-          pointerEvents: 'none',
+          width: '400px',
+          height: '400px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(0, 110, 255, 0.02) 0%, transparent 40%)',
+          filter: 'blur(40px)',
+          top: '-80px',
+          left: '-80px',
         }}
       />
 
-      {/* Glows */}
       <div
-        className="absolute"
-        style={{
-          width: '400px', 
-          height: '400px', 
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(180, 120, 255, 0.08) 0%, transparent 60%)', // opacité 
-          filter: 'blur(40px)', // blur 
-          pointerEvents: 'none',
-          top: '-80px',   
-          left: '-80px',   
-        }}
-      />
-      <div
-        className="absolute"
+        className="absolute pointer-events-none"
         style={{
           width: '600px',
           height: '600px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(180, 120, 255, 0.15) 0%, transparent 60%)',
+          background: 'radial-gradient(circle, rgba(180, 120, 255, 0.02) 0%, transparent 60%)',
           filter: 'blur(90px)',
-          pointerEvents: 'none',
           bottom: '-150px',
           right: '-150px',
         }}
@@ -214,8 +210,8 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
               document.addEventListener('touchend', handleTouchEnd);
             }}
           >
-            <div 
-              ref={setContentRef}
+            <div
+              ref={contentRef}
               className="flex gap-6"
               style={{
                 willChange: 'transform',
@@ -261,23 +257,6 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
         </div>
       </div>
 
-      {/* Transition Top */}
-      <div
-        className="absolute left-0 right-0 top-0 h-16 pointer-events-none z-20"
-        style={{
-          background: 'linear-gradient(to bottom, #0a0a0a 70%, transparent 100%)',
-          filter: 'blur(8px)',
-        }}
-      />
-      {/* Transition Bottom */}
-      <div
-        className="absolute left-0 right-0 bottom-0 h-16 pointer-events-none z-20"
-        style={{
-          background: 'linear-gradient(to top, #0a0a0a 70%, transparent 100%)',
-          filter: 'blur(8px)',
-        }}
-      />
-
       {/* Modal Dialog pour vidéo agrandie */}
       {selectedVideo && (
         <Dialog open={!!selectedVideo} onOpenChange={() => setSelectedVideo(null)}>
@@ -292,11 +271,11 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
             </button>
 
             {/* Container vidéo */}
-            <div 
+            <div
               className="relative w-full max-w-[90vw] max-h-[90vh] flex items-center justify-center"
               onClick={() => setSelectedVideo(null)}
             >
-              <div 
+              <div
                 className="relative rounded-2xl overflow-hidden shadow-2xl"
                 style={{
                   maxHeight: '90vh',
@@ -312,13 +291,13 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
                     filter: 'blur(20px)',
                   }}
                 />
-                
+
                 <video
                   ref={modalVideoRef}
                   poster={selectedVideo.poster}
                   controls
                   className="relative w-full h-full object-contain rounded-2xl"
-                  style={{ 
+                  style={{
                     maxHeight: '90vh',
                     background: '#000',
                   }}

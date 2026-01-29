@@ -94,7 +94,7 @@ export const Footer = () => {
                 Réserver un appel
               </Link>
               <Link
-                href="https://www.instagram.com/agence_dovira/"
+                href="https://www.instagram.com/capron__khalid/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram Dovira"

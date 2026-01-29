@@ -7,7 +7,7 @@ export const StructuredData = () => {
     logo: 'https://dovira.fr/images/logo.png',
     description:
       'Agence de montage vidéo spécialisée en formats courts et publicitaires (Réels, TikTok, Ads, YouTube). Livraison 72h. Devis sur-mesure.',
-    sameAs: ['https://www.instagram.com/agence_dovira/'],
+    sameAs: ['https://www.instagram.com/capron__khalid/'],
     areaServed: {
       '@type': 'Country',
       name: 'France',

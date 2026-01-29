@@ -109,8 +109,8 @@ export const Hero = () => {
                 isPortfolioHover
                   ? 'portfolio'
                   : isPlayHover
-                  ? 'lancer'
-                  : 'glisser'
+                    ? 'lancer'
+                    : 'glisser'
               }
               initial={{ opacity: 0, y: 10, scale: 0.8 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -126,8 +126,8 @@ export const Hero = () => {
               {isPortfolioHover
                 ? 'Portfolio'
                 : isPlayHover
-                ? 'Lancer'
-                : 'Glisser'}
+                  ? 'Lancer'
+                  : 'Glisser'}
             </motion.span>
           </motion.div>
         )}
@@ -232,7 +232,7 @@ export const Hero = () => {
               <div className="relative p-1 rounded-2xl bg-gradient-to-br from-[rgb(180,120,255)]/20 via-[rgb(200,140,255)]/10 to-[rgb(160,100,255)]/20 backdrop-blur-sm border border-[rgb(229,208,255)]/30">
                 {/* Effets de lumière */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[rgb(180,120,255)]/8 via-transparent to-[rgb(160,100,255)]/8 rounded-2xl pointer-events-none" />
-                
+
                 {/* Vidéo YouTube responsive */}
                 <div className="relative rounded-xl overflow-hidden bg-black/20 backdrop-blur-sm">
                   <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
@@ -245,7 +245,7 @@ export const Hero = () => {
                       title="Dovira - Présentation"
                     />
                   </div>
-                  
+
                   {/* Overlay décoratif subtle */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[rgb(229,208,255)]/3 to-transparent pointer-events-none rounded-xl" />
                 </div>
