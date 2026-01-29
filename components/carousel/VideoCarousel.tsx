@@ -237,17 +237,17 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
             </div>
           </div>
 
-          {/* Gradient Fade Edges */}
+          {/* Gradient Fade Edges - hauteur alignée sur les vidéos */}
           <div
-            className="absolute top-0 bottom-0 left-0 w-24 pointer-events-none z-10"
+            className="absolute left-0 w-24 pointer-events-none z-10 h-[320px] sm:h-[568px] top-1/2 -translate-y-1/2"
             style={{
               background: 'linear-gradient(to right, #0a0a0a 0%, rgba(10,10,10,0.12) 60%, transparent 100%)',
-              filter: 'blur(6px)', // adoucit le contour
-              opacity: 0.7, // plus discret
+              filter: 'blur(6px)',
+              opacity: 0.7,
             }}
           />
           <div
-            className="absolute top-0 bottom-0 right-0 w-24 pointer-events-none z-10"
+            className="absolute right-0 w-24 pointer-events-none z-10 h-[320px] sm:h-[568px] top-1/2 -translate-y-1/2"
             style={{
               background: 'linear-gradient(to left, #0a0a0a 0%, rgba(10,10,10,0.12) 60%, transparent 100%)',
               filter: 'blur(6px)',
