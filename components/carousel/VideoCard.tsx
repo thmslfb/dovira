@@ -43,13 +43,13 @@ export function VideoCard({ videoPath, poster, onVideoClick, onVideoRef }: Video
       (entries) => {
         entries.forEach((entry) => {
           setIsInView(entry.isIntersecting);
-          
+
           // Jouer/pauser la vidéo selon la visibilité
           if (videoRef.current) {
             if (entry.isIntersecting) {
               // Attendre que la vidéo ait assez de données avant de jouer
               const video = videoRef.current;
-              
+
               if (video.readyState >= 3) {
                 // HAVE_FUTURE_DATA : assez de données pour jouer
                 video.play().catch(() => {
@@ -58,7 +58,7 @@ export function VideoCard({ videoPath, poster, onVideoClick, onVideoRef }: Video
               } else {
                 // Attendre que les données soient prêtes
                 const canPlayHandler = () => {
-                  video.play().catch(() => {});
+                  video.play().catch(() => { });
                   video.removeEventListener('canplay', canPlayHandler);
                 };
                 video.addEventListener('canplay', canPlayHandler);
@@ -70,7 +70,7 @@ export function VideoCard({ videoPath, poster, onVideoClick, onVideoRef }: Video
         });
       },
       {
-        threshold: 0.5,
+        threshold: 0.1,
         rootMargin: '50px',
       }
     );
@@ -110,7 +110,7 @@ export function VideoCard({ videoPath, poster, onVideoClick, onVideoRef }: Video
           ? '0 15px 40px rgba(180, 120, 255, 0.35), inset 0 0 60px rgba(180, 120, 255, 0.1)'
           : '0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(180, 120, 255, 0.05)',
       }}
-      whileHover={{ 
+      whileHover={{
         scale: 1.06,
       }}
       transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
