@@ -113,7 +113,7 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <p className="text-[#BCBCBC] text-sm">
-            &copy; 2025 Dovira. Tous droits réservés.
+            &copy; 2026 Dovira. Tous droits réservés.
           </p>
         </div>
       </div>
