@@ -34,7 +34,7 @@ export const WorkWithTicker = () => {
     },
     {
       id: 4,
-      name: 'Angelo',
+      name: 'Studio By Meute',
       image: '/images/my-sbm.jpg',
       at: '@my.sbm',
       followers: '3,4 k',
