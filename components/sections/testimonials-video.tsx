@@ -92,7 +92,7 @@ export const TestimonialsVideo = () => {
                     className="cursor-pointer group"
                     onClick={() => handlePlayVideo(videoId)}
                   >
-                    <div className="relative rounded-xl overflow-hidden bg-[rgb(229,208,255)]/10 border border-[rgb(229,208,255)]/20 shadow-lg backdrop-blur-sm p-1 hover:scale-[1.02] transition-transform duration-300 w-[200px] h-[340px] md:w-[220px] md:h-[380px] lg:w-[240px] lg:h-[400px]">
+                    <div className="relative rounded-xl overflow-hidden bg-[rgb(229,208,255)]/10 border border-[rgb(229,208,255)]/20 shadow-lg backdrop-blur-sm p-1 hover:scale-[1.02] transition-transform duration-300 w-[200px] h-[340px] md:w-[200px] md:h-[340px] lg:w-[210px] lg:h-[360px]">
                       <div className="absolute inset-0 bg-gradient-to-br from-[rgb(180,120,255)]/8 via-[#0f0f0f]/30 to-[rgb(160,100,255)]/10 pointer-events-none" />
                       <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[rgb(229,208,255)]/3 to-transparent pointer-events-none" />
 
