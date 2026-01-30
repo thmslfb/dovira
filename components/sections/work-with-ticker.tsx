@@ -25,6 +25,20 @@ export const WorkWithTicker = () => {
       at: '@angelorodrigues__',
       followers: '12,9 k',
     },
+    {
+      id: 3,
+      name: 'Quentin',
+      image: 'https://yt3.googleusercontent.com/8CfhPIJgEjxMrbPLEJ-flOGtvwHefWgSdvR1S1rqwsM76SRnD4cV-0LgcHVqYyAp4U_rJgFgWBs=s160-c-k-c0x00ffffff-no-rj',
+      at: '@QuentinChapeaux',
+      followers: '12 k',
+    },
+    {
+      id: 4,
+      name: 'Angelo',
+      image: '/images/my-sbm.jpg',
+      at: '@my.sbm',
+      followers: '3,4 k',
+    },
   ]
 
   useEffect(() => {

@@ -134,10 +134,10 @@ export const Hero = () => {
       </AnimatePresence>
       <div className="relative mx-auto max-w-6xl px-9 lg:px-12 z-10">
         <div className="lg:mt-0">
-          {/* Layout responsive - mobile stack, desktop two columns */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Colonne de gauche - Contenu textuel */}
-            <div className="order-1">
+          {/* Layout responsive - left aligned content */}
+          <div>
+            {/* Contenu textuel */}
+            <div>
               <AnimatedGroup variants={transitionVariants}>
                 <div className="flex items-center gap-3 p-3 rounded-2xl bg-[rgb(180,120,255)]/10 border border-[rgb(229,208,255)]/20 backdrop-blur-sm w-fit">
                   <span className="relative flex items-center size-2">
@@ -155,7 +155,7 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
-                className="mt-8 text-4xl md:text-5xl md:mt-16 lg:mt-8 max-w-2xl lg:max-w-none tracking-tighter md:tracking-tight font-semibold leading-[1.15] md:leading-[1.15]"
+                className="mt-8 text-4xl md:text-5xl md:mt-16 lg:mt-8 max-w-2xl tracking-tighter md:tracking-tight font-semibold leading-[1.15] md:leading-[1.15]"
                 suppressHydrationWarning
                 style={{
                   background:
@@ -171,7 +171,7 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 }}
-                className="mt-5 text-base md:text-base font-light max-w-md lg:max-w-none tracking-tight text-[#BCBCBC]"
+                className="mt-5 text-base md:text-base font-light max-w-md tracking-tight text-[#BCBCBC]"
               >
                 Avec Dovira, ton agence de montage vidéo, chaque vidéo est conçue
                 pour capter l&apos;attention, renforcer ton images et générer des
@@ -220,44 +220,6 @@ export const Hero = () => {
                 </Button>
               </AnimatedGroup>
             </div>
-
-            {/* Colonne de droite - Vidéo YouTube */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="order-2 relative"
-            >
-              {/* Container avec effet glassmorphisme */}
-              <div className="relative p-1 rounded-2xl bg-gradient-to-br from-[rgb(180,120,255)]/20 via-[rgb(200,140,255)]/10 to-[rgb(160,100,255)]/20 backdrop-blur-sm border border-[rgb(229,208,255)]/30">
-                {/* Effets de lumière */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[rgb(180,120,255)]/8 via-transparent to-[rgb(160,100,255)]/8 rounded-2xl pointer-events-none" />
-
-                {/* Vidéo YouTube responsive */}
-                <div className="relative rounded-xl overflow-hidden bg-black/20 backdrop-blur-sm">
-                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                    <iframe
-                      src="https://www.youtube.com/embed/CwzFRpU7Weo?controls=1&modestbranding=1&rel=0&showinfo=0"
-                      className="absolute top-0 left-0 w-full h-full rounded-xl"
-                      style={{ border: 'none' }}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      title="Dovira - Présentation"
-                    />
-                  </div>
-
-                  {/* Overlay décoratif subtle */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[rgb(229,208,255)]/3 to-transparent pointer-events-none rounded-xl" />
-                </div>
-
-                {/* Particules brillantes décoratives */}
-                <div className="absolute top-4 right-6 w-1 h-1 bg-[rgb(180,120,255)]/60 rounded-full animate-pulse" />
-                <div className="absolute bottom-6 left-4 w-0.5 h-0.5 bg-[rgb(200,140,255)]/80 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-              </div>
-
-              {/* Glow effect externe */}
-              <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-[rgb(180,120,255)]/10 via-[rgb(200,140,255)]/15 to-[rgb(160,100,255)]/10 blur-xl opacity-50 pointer-events-none" />
-            </motion.div>
           </div>
         </div>
       </div>
