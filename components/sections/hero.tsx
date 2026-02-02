@@ -228,7 +228,7 @@ export const Hero = () => {
         <WorkWithTicker />
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#0a0a0a] pointer-events-none z-20" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 lg:h-12 bg-gradient-to-b from-transparent to-[#0a0a0a] pointer-events-none z-20" />
     </section>
   )
 }
