@@ -70,7 +70,7 @@ export const Hero = () => {
   }, [])
 
   return (
-    <section className="relative pt-24 pb-12 md:pb-20 md:pt-36 overflow-hidden bg-[#0a0a0a]">
+    <section className="relative pt-24 pb-12 md:pb-20 lg:pb-8 md:pt-36 overflow-hidden bg-[#0a0a0a]">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute top-20 left-10 w-72 h-72 rounded-full bg-[rgb(180,120,255)]/8 blur-3xl animate-pulse"
@@ -224,7 +224,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="mt-24">
+      <div className="mt-24 lg:mt-12">
         <WorkWithTicker />
       </div>
 

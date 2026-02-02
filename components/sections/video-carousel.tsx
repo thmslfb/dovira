@@ -12,7 +12,7 @@ const VideoCarousel = dynamic(
 export function VideoCarouselSection() {
   return (
     <div className="flex flex-col items-center w-full">
-      <SectionTitle level="h2" className="flex flex-col items-center mt-8" noGlow>
+      <SectionTitle level="h2" className="flex flex-col items-center mt-8 lg:mt-4" noGlow>
         Nos réalisations
       </SectionTitle>
       <VideoCarousel videos={videos} />

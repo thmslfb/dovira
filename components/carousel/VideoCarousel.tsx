@@ -50,7 +50,6 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
 
   // Fonction d'auto-scroll
   const startAutoScroll = (element: HTMLDivElement) => {
-    console.log('[DEBUG] startAutoScroll called');
     const autoScroll = () => {
       const currentContent = contentRef.current;
       if (currentContent && !isDragging.current && !stopAutoScroll.current) {
@@ -76,7 +75,6 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
     };
 
     // Démarrer immédiatement
-    console.log('[DEBUG] Starting requestAnimationFrame');
     animationFrameIdRef.current = requestAnimationFrame(autoScroll);
   };
 
@@ -89,7 +87,6 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
     const startAnimation = () => {
       const content = contentRef.current;
       if (content && !animationFrameIdRef.current) {
-        console.log('[AUTO-SCROLL] Starting animation');
         startAutoScroll(content);
       }
     };

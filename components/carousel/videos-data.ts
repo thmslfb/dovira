@@ -2,9 +2,9 @@
 export const videos = [
   {
     id: '1',
-    videoPath: 'https://res.cloudinary.com/dwthhor0h/video/upload/v1769991501/video1_bp2txr.mp4',
-    videoPathDesktop: 'https://res.cloudinary.com/dwthhor0h/video/upload/v1769991518/video1-desktop_okqflg.mp4',
-    videoPathMobile: 'https://res.cloudinary.com/dwthhor0h/video/upload/v1769991491/video1-mobile_bsqlzg.mp4',
+    videoPath: 'https://res.cloudinary.com/dwthhor0h/video/upload/v1770024191/video8_gkmz7b.mp4',
+    videoPathDesktop: 'https://res.cloudinary.com/dwthhor0h/video/upload/v1770024173/video8_pc_ojfkwa.mp4',
+    videoPathMobile: 'https://res.cloudinary.com/dwthhor0h/video/upload/v1770024168/video8_mobile_zg0jw9.mp4',
     poster: '/videos/video1-poster.jpg',
   },
   {
@@ -42,4 +42,11 @@ export const videos = [
     videoPathMobile: 'https://res.cloudinary.com/dwthhor0h/video/upload/v1769991580/video7-mobile_vzk2cj.mp4',
     poster: '/videos/video7-poster.jpg'
   },
+  {
+    id: '7',
+    videoPath: 'https://res.cloudinary.com/dwthhor0h/video/upload/v1770024211/video9_tmkgen.mp4',
+    videoPathDesktop: 'https://res.cloudinary.com/dwthhor0h/video/upload/v1770024188/video9_pc_vegffr.mp4',
+    videoPathMobile: 'https://res.cloudinary.com/dwthhor0h/video/upload/v1770024174/video9_mobile_jiqrjx.mp4',
+    poster: '/videos/video9-poster.jpg'
+  }
 ];
