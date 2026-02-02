@@ -8,6 +8,8 @@ import { X } from 'lucide-react';
 export type Video = {
   id: string;
   videoPath: string;
+  videoPathDesktop?: string;
+  videoPathMobile?: string;
   poster: string;
 };
 
@@ -109,8 +111,8 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
     if (selectedVideo && modalVideoRef.current) {
       // Déterminer la bonne version de la vidéo
       const videoSrc = isMobile
-        ? selectedVideo.videoPath.replace('.mp4', '-mobile.mp4')
-        : selectedVideo.videoPath.replace('.mp4', '-desktop.mp4');
+        ? (selectedVideo.videoPathMobile || selectedVideo.videoPath)
+        : (selectedVideo.videoPathDesktop || selectedVideo.videoPath);
 
       // Mettre à jour la source et relancer
       modalVideoRef.current.src = videoSrc;
@@ -222,6 +224,8 @@ export function VideoCarousel({ videos }: VideoCarouselProps) {
                 <VideoCard
                   key={`${video.id}-${index}`}
                   videoPath={video.videoPath}
+                  videoPathDesktop={video.videoPathDesktop}
+                  videoPathMobile={video.videoPathMobile}
                   poster={video.poster}
                   onVideoClick={() => {
                     stopAutoScroll.current = true;

@@ -72,7 +72,7 @@ export const WorkWithTicker = () => {
                 x: scrollWidth ? [0, -scrollWidth] : 0,
               }}
               transition={{
-                duration: 40,
+                duration: 20,
                 ease: 'linear',
                 repeat: Infinity,
                 repeatType: 'loop',

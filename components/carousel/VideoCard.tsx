@@ -5,12 +5,14 @@ import { motion } from 'motion/react';
 
 export type VideoCardProps = {
   videoPath: string;
+  videoPathDesktop?: string;
+  videoPathMobile?: string;
   poster: string;
   onVideoClick?: () => void;
   onVideoRef?: (video: HTMLVideoElement | null) => void;
 };
 
-export function VideoCard({ videoPath, poster, onVideoClick, onVideoRef }: VideoCardProps) {
+export function VideoCard({ videoPath, videoPathDesktop, videoPathMobile, poster, onVideoClick, onVideoRef }: VideoCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -18,10 +20,23 @@ export function VideoCard({ videoPath, poster, onVideoClick, onVideoRef }: Video
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Debug: afficher les props reçues
+  useEffect(() => {
+    console.log('[VideoCard] Props received:', { videoPath, videoPathDesktop, videoPathMobile });
+  }, [videoPath, videoPathDesktop, videoPathMobile]);
+
   useEffect(() => {
     setMounted(true);
     setIsMobile(window.innerWidth < 768);
   }, []);
+
+  // Debug: source vidéo utilisée
+  const videoSrc = isMobile ? (videoPathMobile || videoPath) : (videoPathDesktop || videoPath);
+  useEffect(() => {
+    if (mounted) {
+      console.log('[VideoCard] Using video src:', videoSrc, 'isMobile:', isMobile);
+    }
+  }, [mounted, videoSrc, isMobile]);
 
   // Enregistrer la ref vidéo dans le parent
   useEffect(() => {
@@ -137,12 +152,12 @@ export function VideoCard({ videoPath, poster, onVideoClick, onVideoRef }: Video
           backgroundColor: '#000',
         }}
       >
-        {/* Vidéo locale */}
+        {/* Vidéo */}
         <video
           ref={videoRef}
           width="100%"
           height="100%"
-          src={isMobile ? videoPath.replace('.mp4', '-mobile.mp4') : videoPath.replace('.mp4', '-desktop.mp4')}
+          src={videoSrc}
           poster={poster}
           muted
           loop
