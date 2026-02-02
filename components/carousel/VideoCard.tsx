@@ -20,23 +20,13 @@ export function VideoCard({ videoPath, videoPathDesktop, videoPathMobile, poster
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Debug: afficher les props reçues
-  useEffect(() => {
-    console.log('[VideoCard] Props received:', { videoPath, videoPathDesktop, videoPathMobile });
-  }, [videoPath, videoPathDesktop, videoPathMobile]);
-
   useEffect(() => {
     setMounted(true);
     setIsMobile(window.innerWidth < 768);
   }, []);
 
-  // Debug: source vidéo utilisée
+  // Source vidéo selon le device
   const videoSrc = isMobile ? (videoPathMobile || videoPath) : (videoPathDesktop || videoPath);
-  useEffect(() => {
-    if (mounted) {
-      console.log('[VideoCard] Using video src:', videoSrc, 'isMobile:', isMobile);
-    }
-  }, [mounted, videoSrc, isMobile]);
 
   // Enregistrer la ref vidéo dans le parent
   useEffect(() => {
