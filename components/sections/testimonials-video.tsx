@@ -20,10 +20,11 @@ const videoTestimonials: VideoTestimonial[] = [
   { id: 2, type: 'youtube', youtubeId: 'fKgSJpFlSto', thumbnail: '/images/yt-thumbnail-2.jpg' },
   { id: 3, type: 'youtube', youtubeId: 'VdVaVYDhLNU', thumbnail: '/images/yt-thumbnail-3.jpg' },
   { id: 4, type: 'youtube', youtubeId: 'ZyxpD_YuuzI', thumbnail: '/images/yt-thumbnail-4.jpg' },
+  { id: 5, type: 'youtube', youtubeId: 'b580PvM9PvQ', thumbnail: '/images/yt-thumbnail-5.jpg' },
   // Vimeo videos
-  { id: 5, type: 'vimeo', vimeoId: '1101502548', thumbnail: '/images/thumbnail-5.png' },
-  { id: 6, type: 'vimeo', vimeoId: '1101502877', thumbnail: '/images/thumbnail-6.png' },
-  { id: 7, type: 'vimeo', vimeoId: '1107019725', thumbnail: '/images/thumbnail-7.png' },
+  { id: 6, type: 'vimeo', vimeoId: '1101502548', thumbnail: '/images/thumbnail-5.png' },
+  { id: 7, type: 'vimeo', vimeoId: '1101502877', thumbnail: '/images/thumbnail-6.png' },
+  { id: 8, type: 'vimeo', vimeoId: '1107019725', thumbnail: '/images/thumbnail-7.png' },
 ]
 
 const getVideoId = (video: VideoTestimonial): string => {
